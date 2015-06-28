@@ -1,2 +1,2 @@
-# Braverats
+# BraveRats
 Boardgame by Seiji Kanai
