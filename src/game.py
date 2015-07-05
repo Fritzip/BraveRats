@@ -15,15 +15,6 @@ class Game():
         self.cur = {"reveal_first" : 0, "diff_scr" : 0}
 
         self.l_rounds = []
-        # self.m_results = np.matrix([[0,0,0,0,0,2,0,0],
-        #                             [0,0,2,1,2,2,2,3],
-        #                             [0,1,0,1,2,2,2,2],
-        #                             [0,2,2,0,1,2,1,2],
-        #                             [0,1,1,2,0,2,2,2],
-        #                             [1,1,1,1,1,0,2,2],
-        #                             [0,1,1,2,1,1,0,2],
-        #                             [0,4,1,1,1,1,1,0]])
-
 
         self.m_results = np.array([[ [[ ],0],   [[ ],0],   [[2  ],0],   [[   ],0],   [[   ],0],   [[],5],   [[2  ],0],   [[],0]  ],
                                     [ [[ ],0],   [[ ],5],   [[2  ],5],   [[2  ],5],   [[2  ],5],   [[],5],   [[2  ],5],   [[],3]  ],
@@ -33,10 +24,6 @@ class Game():
                                     [ [[ ],5],   [[ ],5],   [[   ],5],   [[   ],5],   [[   ],5],   [[],5],   [[   ],5],   [[],2]  ],
                                     [ [[1],0],   [[1],5],   [[1,2],5],   [[1,2],5],   [[1,2],5],   [[],5],   [[1,2],5],   [[],2]  ],
                                     [ [[ ],0],   [[ ],4],   [[   ],1],   [[   ],1],   [[   ],1],   [[],1],   [[   ],1],   [[],5]  ]])
-
-
-        # self.d_results = {0 : self.nullifie, 1 : self.update_scores, 2 : self.update_scores, 
-                          # 3 : self.game_over}
 
     def run(self):
         card = []
@@ -64,7 +51,6 @@ class Game():
         self.ps[2]["cards"].remove(self.ps[2]["card"])
 
     def evaluate_round(self):
-        # result = self.m_results[card_p1, card_p2]
         self.cur["diff_scr"] = self.ps[1]["card"] + self.ps[1]["bonus"]["round_pts"] - self.ps[2]["card"] + self.ps[2]["bonus"]["round_pts"]
 
         for player in [1,2]: self.ps[player]["bonus"]["round_pts"] = 0
@@ -87,13 +73,6 @@ class Game():
         else:
             print "C'est impossible !!"
        
-        # if result[1] == 5 :
-
-        #     win_round = self.d_results[win_round](win_round)
-        # else :
-        #     win_round = self.d_results[result[1]](result[1])
-        #     # win_round = self.d_results[result[1]](result%2+(1-result%2)*2) ## TODO: Améliorer calcul
-
         self.update_round(win_round)
         return win_round
 
@@ -128,7 +107,6 @@ class Game():
         self.l_rounds.append([(self.ps[1]["card"], self.ps[2]["card"]), win])
         
     def game_over(self, player):
-        # if self.ps[1]["card"] == 7: player = (player%2)+1 # HERE !
         print "Game Over : %s win !!!" % self.ps[player]["p"].name
         sys.exit()
         

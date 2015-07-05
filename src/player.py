@@ -10,14 +10,14 @@ CARDS = ["Magicien",
         "General",
         "Prince"]
 
-POWERS = ["The round is nullified", # handled by matrix
-        "Against the prince you win",#handled by matrix
+POWERS = ["The round is nullified",
+        "Against the prince you win",
         "Next round your opponents reveal his card", # todo
-        "The lowest streigth wins",#handled by matrix
-        "This round count 2 victories if you win it", # in bonus
-        "Nullified opponent's card power",#no apply power for other player
-        "+2 for your next round", # in bonus
-        "You win the round"] #handled by matrix
+        "The lowest streigth wins",
+        "This round count 2 victories if you win it",
+        "Nullified opponent's card power",
+        "+2 for your next round", 
+        "You win the round"]
 
 class Player():
     
