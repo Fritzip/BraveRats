@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="myressources">
+    <file>../../../data/img/blue0.png</file>
+    <file>../../../data/img/blue1.png</file>
+    <file>../../../data/img/blue2.png</file>
+    <file>../../../data/img/blue3.png</file>
+    <file>../../../data/img/blue4.png</file>
+    <file>../../../data/img/blue5.png</file>
+    <file>../../../data/img/blue6.png</file>
+    <file>../../../data/img/blue7.png</file>
+    <file>../../../data/img/red0.png</file>
+    <file>../../../data/img/red1.png</file>
+    <file>../../../data/img/red2.png</file>
+    <file>../../../data/img/red3.png</file>
+    <file>../../../data/img/red4.png</file>
+    <file>../../../data/img/red5.png</file>
+    <file>../../../data/img/red6.png</file>
+    <file>../../../data/img/red7.png</file>
+  </qresource>
+</RCC>
